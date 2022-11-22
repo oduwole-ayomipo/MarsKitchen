@@ -1,0 +1,1040 @@
+/***** css code written by Oduwole Ayomipo *****/
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    place-items: center;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+h4{
+    text-align: center;
+    color: #BC3908;
+    font-family:  'Croissant One', cursive;
+    font-size: 4rem;
+}
+
+h5 {
+    text-align: center;
+    color: #220901;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 01px;
+    text-transform: uppercase;
+}
+
+
+/***** Navigation bar *****/
+nav{
+    position: fixed;
+    height: 4rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding: 1.3rem 64px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none;
+    width: 60vw; 
+    padding: 0 0.7vw;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+    transform: translateX(100rem);
+    animation: slidein .5s forwards;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 2.5vw;
+}
+
+.nav-links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a:hover,
+nav ul li a.active {
+    transition: .4s;
+    color: rgb(195, 73, 73);
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+
+/* -- Horizontal line hover effect on the nav bar */
+
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: rgb(195, 73, 73);
+    left: 30%;
+    transform: scaleX(0);
+    transition: all 1s;
+}
+
+nav ul li a::before {
+    top: -0.3rem;
+    transform-origin: left;
+}
+
+nav ul li a::after {
+    bottom: -0.3rem;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+/***** End Navigation bar *****/
+
+
+section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/***** HOME *****/
+
+.home   {
+    width: 100%;
+}
+
+.home-image{
+    width: 100%;
+    height: 100vh;
+    background-image: url(res/image01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.home-overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-content {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.home-head-text > h1{
+    font-size: 9rem;
+    font-family: 'Croissant One', cursive;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #a5350c;
+    line-height: 9rem; 
+    transform: translateX(100rem);
+    animation: slidein 4s forwards;
+    
+}
+
+.home-body-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-body-text > h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.7rem;
+    transform: translateX(100rem);
+    animation: slidein 4.5s forwards;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin-top: 4%;
+    background-color: #821f0bc3;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.8rem 3rem;
+    border-radius: 20px;
+    font-size: 15px;
+    border-style: none;
+    transform: translateX(100rem);
+    animation: slidein 5s forwards;
+}
+
+
+button:hover {
+    opacity: 80%;
+    box-shadow: 2px 2px 12px rgba(68, 65, 65, 0.525) ;
+    cursor: pointer;
+}
+
+
+/***** End HOME *****/
+
+/***** About *****/
+.about   {
+    width: 98%;
+    margin: 0 auto;
+    min-height: 65vh;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-content{
+    width: 50%;
+    padding: 16px;
+    margin-right: auto;  
+}
+
+.about-image {
+    max-height: 70vh;
+    width: 45%;
+    margin-left: 5%; 
+}
+
+.about-image > img{
+    width: 100%;
+    max-height: 70vh;
+}
+
+.about-content h4{
+    text-align: center;
+    color: #BC3908;
+    font-family:  'Croissant One', cursive ;
+    font-size: 4rem;
+}
+
+.about-content p{
+    font-size: 15px;
+    margin-top: 2.5%;
+    color: #220901;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+
+.about-content p span{
+    font-size: 13px;
+    font-weight: 800;
+    color: #220901;
+    cursor: pointer;
+}
+
+
+.about-content p span:hover{
+    opacity: 70%;
+}
+/***** End About *****/
+
+
+
+/***** Menu *****/
+.menu   {
+    height: fit-content;
+    width: 98%;
+    margin: 3rem 1% 0 1%;
+}
+
+.menu-image{
+    background-image: url(res/menu02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-container {
+    width: 80%;
+    height: fit-content;
+    margin: 3rem auto;
+    background-color: #f4f3eede;
+    height: fit-content;
+}
+
+hr {
+    background-color: #220901;
+    height: 2px;
+    border-style: none;
+}
+
+.menu-flex{
+    padding: 2%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-column {
+    width: 100%;
+}
+
+.menu-items {
+    padding: 8px;
+}
+
+.menu-items h6 {
+    color:#220901;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.menu-items p {
+    color: #313337db;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+.menu-items h6 span{
+    margin: 0 3.5rem;
+    color: rgb(195, 73, 73);
+    font-weight: 600;
+}
+
+
+/***** End Menu *****/
+
+/***** Hero *****/
+.Hero   {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+
+.card-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    margin: 0.7rem;
+    margin-top: 0%;
+}
+
+.Hero-card {
+    position: relative;
+    width: 22rem;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131418;
+    margin: 2.5rem ;
+}
+
+
+.Hero-card::before,
+.Hero-card::after   {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0%;
+    background-color: rgb(195, 73, 73);
+    transform: scaleX(0);
+    transition: all 1s;
+
+}
+
+.Hero-card::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.Hero-card::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.Hero-card:hover::before,
+.Hero-card:hover::after {
+    transform: scaleX(1);
+}
+
+.Hero-card :hover {
+    box-shadow: 2px 2px 12px rgba(68, 65, 65, 0.525);
+    cursor: pointer;
+}
+
+.Hero-glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.Hero-content {
+    padding: 2rem;
+}
+
+.Hero-content h5 {
+    padding: 1rem 0;
+    color: #f4f3ee;
+}
+
+.Hero-content p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7rem;
+}
+
+.Hero-content p span {
+    opacity: 80%;
+}
+
+/***** End Hero *****/
+
+/***** Bookings *****/
+
+.bookings {
+    height: fit-content;
+    width: 98%;
+    margin: 3rem 1% 0 1%;
+}
+
+.bookings-image {
+    background-image: url(res/image04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookings-container {
+    width: 80%;
+    margin: 5rem auto;
+    background-color: #f4f3eede;
+    height: fit-content;
+    display: flex;
+}
+
+.bookings-time {
+    background-color: rgba(19, 20, 24, 0.7);
+    width: 40%;
+}
+
+.time-heading > h4,
+.reservation-heading > h4 {
+    font-size: 2rem;
+}
+
+.time-container {
+    display: flex;
+    margin: 0.7rem;
+    
+}
+
+.time-day > p, 
+.time-hours > p{
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.time-hours {
+    text-align: left;
+    margin-left: auto;
+}
+
+.bookings-reservation {
+    width: 60%;
+}
+
+.reservation-container {
+    padding-bottom: 18px;
+}
+
+.reservaion-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 40%;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: groove;
+    border-color: #a5350cce;
+    border-top-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+
+::placeholder {
+    color: #131418;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #131418;
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: #131418;
+    opacity: 1;
+}
+
+:focus {
+    border: 1px solid #a5350c;
+    outline: 1px solid #a5350c;
+    background-color: #f4f3ee;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+    background-color: #a5350c;
+}
+
+#text {
+    color: #a5350c !important;
+}
+
+#date {
+    color: #131418 !important;
+}
+
+.reservations-button {
+    display: flex;
+    justify-content: center;
+}
+
+
+/***** End Bookings *****/
+
+/***** Contact *****/
+
+.contact {
+    width: 100%;
+    padding: 14px;
+    margin-top: 3rem;
+}
+
+.contact-heading {
+    text-align: center;
+}
+.contact-Map,
+.contact-Map img {
+    display: none;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 8rem;
+}
+
+.contact-details {
+    width: 50%;
+}
+
+.contact-content > h6 {
+    color: #131418;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 6px;
+}
+
+.contact-content > p,
+.social-media > p{
+    color: #131418;
+    font-size: 1rem;
+    letter-spacing: 0.4px; 
+    padding: 6px 0 16px 6px;
+}
+
+.social-media {
+    display: flex;
+}
+
+.contact-map {
+    width: 50%;
+    max-height: 40vh;
+}
+
+.contact-map img {
+    width: 100%;
+    max-height: 100%;
+}
+
+/***** End Contact *****/
+
+/***** Footer *****/
+.footer{
+    background-color: #131418;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer > h6 {
+    padding: 6px;
+    color: #f4f3ee;
+}
+
+.footer > h6 span {
+    color: #a5350c;
+}
+
+.footer > h6 span:hover {
+    opacity: 80%;
+}
+/***** End Footer *****/
+
+@keyframes slidein {
+    from{
+
+    }
+
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+/***** The End *****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** Responsiveness *****/
+
+/*****  Medium Screen *****/
+@media screen and (max-width: 1035px){
+
+    .home-head-text > h1{
+        font-size: 6.5rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+    
+    .about{
+        display: block;
+    }
+       
+    
+
+    .about-content{
+        width: 100%;
+    }
+
+    .about-image, 
+    .about-image > img {
+        width: 100%;
+        margin: 0 auto;
+        height: 40vh;
+    }
+
+    .menu-items h6 span{
+        margin: 0 1.5rem;
+    }
+
+    .bookings-container {
+        display: block;
+        margin: 2rem auto;
+    }
+
+    .bookings-time,
+    .bookings-reservation {
+        width: 100%;
+    }
+
+    .time-container {
+        margin: 2rem;
+        margin-bottom: 0%;
+    }
+
+    .time-day > p:last-child, 
+    .time-hours > p:last-child {
+        padding-bottom: 3rem;
+    }
+
+
+    .contact-container {
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .contact-Map {
+        display: block;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .contact-Map img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-details {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        margin: 1rem 0;
+        justify-content: space-evenly;
+    }
+
+    .contact-content > h6 {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .contact-content > p,
+    .social-media > p{
+    font-size: 0.6rem;
+    padding: 6px 0 16px 6px;
+    }
+
+    .social-media {
+        display: block;    
+    }
+
+    .contact-map, 
+    .contact-map img {
+        display: none;
+    }
+
+}
+
+/***** End Medium Screen *****/
+
+
+
+/***** Small Screen *****/
+@media screen and (max-width: 800px){
+    .logo{
+        padding: 1.4rem 16px;
+    }
+
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        justify-content: space-evenly;
+    }
+    .nav-links.open{
+        clip-path: circle(1400px at 90% -10%);
+        -webkit-clip-path: circle(1400px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+
+    /***** Section *****/
+
+    .home-head-text > h1 {
+        font-size: 4.2rem;
+        line-height: 5rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    .home-body-text > h2{
+        letter-spacing: 0.5rem;
+    }
+
+    .menu-container {
+        margin: 1rem auto;
+    }
+
+    .menu-flex {
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .menu-column,
+    .menu-column0{
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items h6 span{
+        margin: 0;
+    }
+
+    /***** End Section *****/
+
+}
+/***** End Small Screen *****/
+
+
+/***** Medium Screen *****/
+
+@media screen and (max-width: 536px) {
+    .home-head-text > h1 {
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .home-body-text > h2{
+        font-size: 0.7rem;
+        letter-spacing: 0.2rem;
+        text-align: center;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 0.5rem 2rem;
+    }
+    .about-content h4,
+    h4{
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 0.8rem; 
+    }
+
+    .menu-items h6 {
+        font-size: 0.8rem; 
+    }
+
+    .menu-items p,
+    .Hero-content p,
+    .about-content p {
+         font-size: 12px;
+         line-height: 0.6rem;
+    }
+    
+
+    .Hero-card {
+        margin: 2rem;
+    }
+    
+    .about-content p,
+    .Hero-content p {
+        line-height: 1.4rem;
+    }
+    
+
+    .time-container {
+        margin: 0.5rem;
+    }
+
+    .time-day > p, 
+    .time-hours > p{
+        font-size: 0.8rem;
+    }
+
+    input {
+        width: 80%;
+        margin: 0.5rem;
+    }
+
+    .contact-details {
+        display: block;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center ;    
+    }
+
+
+    .footer > h6,
+    .footer > h6 span {
+        font-size: 8px;
+    }
+
+}
+/***** End Smaller Screen *****/
+
+/***** End Responsive *****/
+
+
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/***** The End *****/
+
+/***** css code written by Oduwole Ayomipo *****/
