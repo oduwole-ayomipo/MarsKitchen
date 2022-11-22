@@ -22,6 +22,8 @@ Mars Kitchen is a resturant website designed by Oduwole Ayooo using HTML5, CSS3 
 ### Contact ☎️
 Thank you very much for checking out this project. I can be contacted via:
 - Oduwole Ayomipo
-- harkorede318@gmail.com
+- <a href="harkorede318@gmail.com">G-Mail</a> 
+- <a href="https://twitter.com/justayooo">Twitter</a>
+- <a href="https://www.linkedin.com/in/oduwole-ayomipo/">Linkedin</a> 
 
 **Don't forget to like this project**
